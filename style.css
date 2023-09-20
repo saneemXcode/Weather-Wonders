@@ -12,15 +12,15 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #000;
+    overflow: hidden;
 
 }
 .container{
     width: 400px;
     height: min-content;
-    background-color: #fff;
+    background: linear-gradient(45deg, rgb(2, 247, 255), rgba(1, 175, 255, 0.899));
     border-radius: 12px;
     padding: 28px;
-    overflow: hidden;
 }
 .search-box{
     width: 100%;

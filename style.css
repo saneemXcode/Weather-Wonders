@@ -20,6 +20,7 @@ body{
     background-color: #fff;
     border-radius: 12px;
     padding: 28px;
+    overflow: hidden;
 }
 .search-box{
     width: 100%;

@@ -23,8 +23,8 @@ body{
 .search-box{
     width: 100%;
     height: min-content;
-    background-color:  #e6f5fb;
-    border-radius: 16px;
+    /* background-color:  #e6f5fb; */
+    /* border-radius: 16px; */
     display: flex;
     justify-content: space-around;
     align-items: center;

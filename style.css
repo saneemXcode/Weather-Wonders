@@ -12,8 +12,6 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #000;
-    overflow: hidden;
-
 }
 .container{
     width: 400px;

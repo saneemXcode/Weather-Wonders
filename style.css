@@ -129,7 +129,7 @@ body{
 
     @media only screen and (max-width: 600px) {
         body {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;

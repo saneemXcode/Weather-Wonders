@@ -18,7 +18,7 @@ body{
 .container{
     width: 400px;
     height: min-content;
-    background: linear-gradient(45deg, rgb(2, 247, 255), rgba(1, 175, 255, 0.899));
+    background: linear-gradient(45deg, rgb(216, 254, 255), rgba(1, 175, 255, 0.899));
     border-radius: 12px;
     padding: 28px;
 }

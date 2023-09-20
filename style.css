@@ -139,7 +139,7 @@ body{
         .container {
             width: 90%; 
             max-width: 400px; 
-            background-color: #fff;
+            background: linear-gradient(45deg, rgb(216, 254, 255), rgba(1, 175, 255, 0.899));
             border-radius: 12px;
             padding: 20px; 
         }
@@ -163,13 +163,18 @@ body{
         }
     
         .search-box button {
-            width: 40px; /* Adjust the button size */
+            width: 40px; 
             height: 40px;
             background-color: #e6f5fb;
             border-radius: 50%;
             cursor: pointer;
             font-size: 20px;
-            margin-right: -14px; /* Adjust the margin for button alignment */
+            margin-right: -14px; 
+        }
+        .search-box button:hover{
+            color: #fff;
+            background-color: #ababab;
+            
         }
     
         .weather-body {

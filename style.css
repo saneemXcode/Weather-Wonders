@@ -1,3 +1,34 @@
+:root {
+    --font-color: #222;
+    --bg-color: #f2f3f7;
+    --button-bg-color: #f2f3f7;
+    --button-shadow:
+      -6px -6px 8px rgba(255, 255, 255, 0.9),
+      5px 5px 8px rgba(198, 189, 189, 0.25);
+  }
+  .light {
+    --font-color: #222;
+    --bg-color: #f2f3f7;
+    --button-bg-color: #f2f3f7;
+    --toggle-color: rgb(60, 59, 59);
+    --switch-bg-color: rgb(105, 103, 103);
+    --button-shadow:
+      -6px -6px 8px rgba(255, 255, 255, 0.9),
+      5px 5px 8px rgba(198, 189, 189, 0.25);
+  }
+  
+  .dark {
+    --font-color: #fff;
+    --bg-color: #181818a3;
+    --button-bg-color: #727272;
+    --toggle-color: rgb(180, 179, 179);
+    --switch-bg-color: gray;
+    --button-shadow:
+      -2px -2px 4px rgba(255, 255, 255, 0.05),
+      0 0 10px 10px rgba(255, 255, 255, 0.005),
+      2px 2px 8px rgba(60, 60, 60, 0.1);
+  }
+  
 *{
     margin: 0;
     padding: 0;
@@ -11,20 +42,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: var(--bg-color);
 }
 .container{
     width: 400px;
     height: min-content;
-    background: linear-gradient(45deg, rgb(216, 254, 255), rgba(1, 175, 255, 0.899));
-    border-radius: 12px;
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);   
+     border-radius: 12px;
     padding: 28px;
 }
 .search-box{
-    width: 100%;
+    width: 90%;
     height: min-content;
     /* background-color:  #e6f5fb; */
-    /* border-radius: 16px; */
+    border-radius: 16px;
+    /* background-color: var(--bg-color);
+    box-shadow: -2px -2px 4px 0px #ffffff,50px 50px 50px 0px rgba(0, 0, 0, 0.25); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -33,19 +67,21 @@ body{
     width: 84%;
     font-size: 20px;
     text-transform: capitalize;
-    color: #000;
-    background-color: #e6f5fb;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);
     padding: 12px 16px;
     border-radius: 14px;
-
 }
 .search-box  input::placeholder{
-    color: #000;
+    color: var(--font-colors);
 }
 .search-box  button{
     width: 46px;
     height: 46px;
-    background-color: #e6f5fb;
+    margin-left: 20PX;
+    background-color: var(--button-bg-color);
+    box-shadow: var(--button-shadow);
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
@@ -61,6 +97,10 @@ body{
     align-items: center;
     flex-direction: column;
     margin-block: 20px;
+    border-radius: 10PX;
+   height: 425px;
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);
 }
 .weather-body img{
     width: 60%;
@@ -73,6 +113,7 @@ body{
     font-size: 40px;
     font-weight: 800;
     position: relative;
+    color: var(--font-color);
 }
 .weather-box .temperature sup{
     font-size: 20px;
@@ -83,6 +124,7 @@ body{
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
+    color: var(--font-color);
 }
 .weather-detalis{
     width:100%;
@@ -93,12 +135,27 @@ body{
 .humidity, .wind{
     display: flex;
     align-items: center;
+    color: var(--font-color);
 }
 .humidity{
-    margin-left: 20px;
+    max-width: 250px;
+  max-height: 70px;
+  border-radius: 10px;
+    margin-left: 40px;
+    margin-top:-30px ;
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);
 }
 .wind{
     margin-right: 20px;
+    max-width: 200px;
+    max-height: 70px;
+    border-radius: 10px;
+      margin-left: 40px;
+      margin-top:-30px ;
+      background-color: var(--bg-color);
+      box-shadow: var(--button-shadow);
+  
 }
 .weather-detalis i{
     font-size: 36px;
@@ -108,7 +165,7 @@ body{
     font-size: 16px;
 }
 .weather-detalis span{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
 }
 .location-not-found{
@@ -117,29 +174,84 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);
+    border-radius: 10px;
+
 }
 .location-not-found h1{
     font-size: 20px;
-    color:#6b6b6b ;
+    color:var(--font-color) ;
     margin-block-end: 15px;
+    margin-top: 20px;
 }
 .location-not-found img{
     width: 80%;
 }
 
+
+.calendar-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--bg-color);
+    box-shadow: var(--button-shadow);
+    max-width: 180px;
+    width: 100%;
+    border-radius: 30px;
+    margin-left: 160px;
+    margin-top: 30px;
+}
+
+.toggle {
+    display: flex;
+}
+.toggle span {
+    margin-right: 10px;
+    color: var(--font-color);
+}
+
+.dark-mode-switch {
+    position: relative;
+    width: 48px;
+    height: 25px;
+    border-radius: 14px;
+    background-color:var(--switch-bg-color);
+    cursor: pointer;
+}
+
+.dark-mode-switch-ident {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: var(--toggle-color);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.2s ease-in-out;
+}
+
+body.dark .dark-mode-switch .dark-mode-switch-ident {
+    top: 2px;
+    left: calc(2px + 50%);
+}
+
+
     @media only screen and (max-width: 600px) {
         body {
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000;
+            background-color:  #cecece;
         }
     
         .container {
             width: 90%; 
             max-width: 400px; 
-            background: linear-gradient(45deg, rgb(216, 254, 255), rgba(1, 175, 255, 0.899));
+            background-color: var(--bg-color);
+            box-shadow: -2px -2px 4px 0px #ffffff,50px 50px 50px 0px rgba(198, 189, 189, 0.25);
             border-radius: 12px;
             padding: 20px; 
         }
@@ -157,7 +269,8 @@ body{
             font-size: 17px;
             text-transform: capitalize;
             color: #000;
-            background-color: #e6f5fb;
+             background-color: var(--bg-color);
+            box-shadow: -2px -2px 4px 0px #ffffff,50px 50px 50px 0px rgba(198, 189, 189, 0.25);
             padding: 12px 16px;
             border-radius: 14px;
         }
@@ -165,7 +278,8 @@ body{
         .search-box button {
             width: 40px; 
             height: 40px;
-            background-color: #e6f5fb;
+        background-color: var(--bg-color);
+    box-shadow: -2px -2px 4px 0px #ffffff,50px 50px 50px 0px rgba(198, 189, 189, 0.25);
             border-radius: 50%;
             cursor: pointer;
             font-size: 20px;
@@ -182,7 +296,8 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-block: 17px;
+            margin-block: 20px;
+            height:350px;
         }
     
         .weather-body img {

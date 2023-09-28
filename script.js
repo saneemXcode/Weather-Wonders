@@ -8,6 +8,14 @@ const wind_speed=document.getElementById('wind-speed');
 const location_not_found=document.querySelector('.location-not-found');
 const weather_body=document.querySelector('.weather-body');
 
+let dark_mode_toggle = document.querySelector('.dark-mode-switch')
+
+dark_mode_toggle.onclick = () => {
+    document.querySelector('body').classList.toggle('dark')
+    document.querySelector('body').classList.toggle('light')
+}
+
+
  async function checkWeather(city){
     const api_key="e143cebf6131951bec3ef2775f11baef";
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;

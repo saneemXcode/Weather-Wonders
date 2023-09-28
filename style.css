@@ -32,14 +32,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
+    background-color: #cecece;
 }
 
 .container {
     width: 400px;
     height: min-content;
     background-color: var(--bg-color);
-    box-shadow: var(--button-shadow);
+    /* box-shadow: var(--button-shadow); */
     border-radius: 12px;
     padding: 28px;
 }
@@ -134,6 +134,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    position: relative;
 }
 
 .humidity,
@@ -144,18 +145,19 @@ body {
 }
 
 .humidity {
-    max-width: 250px;
+   width: 275px;
     max-height: 70px;
     border-radius: 10px;
     margin-left: 40px;
     margin-top: -30px;
     background-color: var(--bg-color);
     box-shadow: var(--button-shadow);
+    
 }
 
 .wind {
     margin-right: 20px;
-    max-width: 200px;
+    width: 275px;
     max-height: 70px;
     border-radius: 10px;
     margin-left: 40px;
@@ -207,7 +209,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--bg-color);
+    background-color: #ede8e8;
+  
     }
 
     .container {

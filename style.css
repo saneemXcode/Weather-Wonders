@@ -168,7 +168,8 @@ body {
 }
 
 .weather-detalis i {
-    font-size: 36px;
+    font-size: 30px;
+    padding-inline: 3px;
 }
 
 .weather-detalis .text {

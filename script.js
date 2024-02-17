@@ -13,7 +13,8 @@ const weather_body=document.querySelector('.weather-body');
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
     const weather_data=  await fetch(`${url}`).then(response =>response.json());
-       
+    console.log(weather_data)
+    
      if(weather_data.cod===`404`){
         location_not_found.style.display="flex";
         weather_body.style.display="none";
